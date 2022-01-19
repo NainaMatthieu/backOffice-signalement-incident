@@ -1,0 +1,46 @@
+<!-- Liste signalement sans region start -->
+<div class="col-sm-12">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Affectation de signalements</h5>
+                </div>
+                <div class="card-body table-border-style">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                    <th>Status</th>
+                                    <th>Region</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="signalement in listeSignalementSansRegion">
+                                    <td>{{signalement.type}}</td>
+                                    <td>{{signalement.description}}</td>
+                                    <td>{{signalement.status}}</td>
+                                    <td><select class="js-example-basic-single form-control select2-hidden-accessible"  aria-hidden="true">
+                                        <option value="">selectioné</option>
+                                        <optgroup label="region">
+                                            <option  ng-repeat="regions in listeRegion" ng-click="changeValue(regions.id)">{{regions.libelle}}</option>
+                                        </optgroup>
+
+                                    </select>
+
+                                    </td>
+                                    
+                                    <td><button type="button" class="btn  btn-info" ng-click="affecter(signalement)">Affecter</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Liste signalement sans region end -->

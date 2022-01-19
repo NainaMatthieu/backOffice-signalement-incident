@@ -1,0 +1,46 @@
+<!-- liste signalement : affectation status start -->
+<div class="col-sm-12">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Assignation de status</h5>
+                </div>
+                <div class="card-body table-border-style">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                    <th>Region</th>
+                                    <th>Status</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="signalement in signalementSansStatus">
+                                    <td>{{signalement.type}}</td>
+                                    <td>{{signalement.description}}</td>
+                                    <td>{{signalement.region}}</td>
+                                    <td><select class="js-example-basic-single form-control select2-hidden-accessible" aria-hidden="true">
+                                        <option value="">selectioné</option>
+                                        <optgroup label="status">
+                                            <option ng-model="status" ng-repeat="statut in listeStatus" ng-click="changeValue(statut.status)" value="{{statut.statut}}">{{statut.status}}</option>
+                                        </optgroup>
+
+                                    </select>
+
+                                    </td>
+                                    
+                                    <td><button type="button" class="btn  btn-info" ng-click="modifierStatus(signalement)">Affecter</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- liste signalement : affectation status end -->

@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BackOffice</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    
+
+</head>
+<body class="" ng-app="backOfficeApp">
+	<!-- [ Pre-loader ] start -->
+	<div class="loader-bg">
+		<div class="loader-track">
+			<div class="loader-fill"></div>
+		</div>
+	</div>
+	<!-- [ Pre-loader ] End -->
+	<!-- [ navigation menu ] start -->
+	<nav class="pcoded-navbar menu-light ">
+		<div class="navbar-wrapper  ">
+			<div class="navbar-content scroll-div " >
+				
+				<div class="">
+					<div class="main-menu-header">
+						<img class="img-radius" src="assets/images/user/admin.jpg" alt="User-Profile-Image">
+						<div class="user-details">
+							<div id="more-details">Admin<i class="fa fa-caret-down"></i></div>
+						</div>
+					</div>
+
+				<ul class="nav pcoded-inner-navbar ">
+					<li class="nav-item pcoded-menu-caption">
+					    <label>Navigation</label>
+					</li>
+					<li class="nav-item">
+					    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Back Office</span></a>
+					</li>
+					
+					
+					<li class="nav-item pcoded-menu-caption">
+					    <label>Gestion des régions</label>
+					</li>
+					<li class="nav-item">
+					    <a href="localhost/BackOffice//#/affecterRegion" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Affectation région</span></a>
+					</li>
+					<li class="nav-item">
+					    <a href="localhost/BackOffice//#/affecterStatus" class="nav-link "><span class="pcoded-micon"><i class="fas fa-wrench"></i></span><span class="pcoded-mtext">Modification status</span></a>
+					</li>
+					<li class="nav-item">
+					    <a href="tbl_bootstrap.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-edit-1"></i></span><span class="pcoded-mtext">Créer une région</span></a>
+					</li>
+					<li class="nav-item pcoded-menu-caption">
+					    <label>Statistique</label>
+					</li>
+					<li class="nav-item">
+					    <a href="localhost/BackOffice/#/statistique" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Voir les statistiques</span></a>
+					</li>
+ 
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- [ navigation menu ] end -->
+	<!-- [ Header ] start -->
+	<header class="navbar pcoded-header navbar-expand-lg navbar-light header-blue">
+		
+			
+				<div class="m-header">
+					<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+					<a href="#!" class="b-brand">
+						<!-- ========   change your logo hear   ============ -->
+						<img src="assets/images/logo.png" alt="" class="logo">
+						<img src="assets/images/logo-icon.png" alt="" class="logo-thumb">
+					</a>
+					<a href="#!" class="mob-toggler">
+						<i class="feather icon-more-vertical"></i>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a href="#!" class="pop-search"><i class="feather icon-search"></i></a>
+							<div class="search-bar">
+								<input type="text" class="form-control border-0 shadow-none" placeholder="Search hear">
+								<button type="button" class="close" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+						</li>
+					</ul>
+					
+						<li>
+							<div class="dropdown drp-user">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="feather icon-user"></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right profile-notification">
+									<div class="pro-head">
+										<img src="assets/images/user/admin.jpg" class="img-radius" alt="User-Profile-Image">
+										<span>{{admin}}</span>
+										<a href="auth-signin.html" class="dud-logout" title="Logout">
+											<i class="feather icon-log-out"></i>
+										</a>
+									</div>
+									<ul class="pro-body">
+										 
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+			
+	</header>
+	<!-- [ Header ] end -->
+	
+	
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10">Back Office</h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#!">Admin</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+        <!-- [ Main Content ] start -->
+        <div class="row" ng-controller="statistiqueCtrl">
+        <!--statistique debut -->
+<div class="col-xl-6 col-md-12">
+    <div class="card table-card" ng-repeat =" signalement in listParType">
+        <div class="card-header">
+            <h5>Signalement résolu</h5>
+            <div class="card-header-right">
+                <div class="btn-group card-option">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="feather icon-more-horizontal"></i>
+                    </button>
+                    <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                        <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+                        <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                        <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+                        <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-body p-0">
+            <!-- chart js signalement résolu -->
+            <div id="resolu{{signalement.index}}"></div>
+        </div>
+    </div>
+</div>
+<div class="col-xl-6 col-md-12">
+    <div class="card latest-update-card">
+        <div class="card-header">
+            <h5>Signalement par mois</h5>
+            <div class="card-header-right">
+                <div class="btn-group card-option">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="feather icon-more-horizontal"></i>
+                    </button>
+                    <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                        <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+                        <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                        <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+                        <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <!-- chart js signalement par mois -->
+            <div id="line-chart-1"></div>
+			
+        </div>
+    </div>
+	<div class="card latest-update-card">
+        <div class="card-header">
+            <h5>Signalement résolu vue d'ensemble</h5>
+            <div class="card-header-right">
+                <div class="btn-group card-option">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="feather icon-more-horizontal"></i>
+                    </button>
+                    <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                        <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+                        <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                        <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+                        <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <!-- chart js signalement par mois -->
+            <div id="pie-chart-1"></div>
+			
+        </div>
+    </div>
+</div> 
+<!-- statistique fin -->
+<!-- Apex Chart -->
+
+            
+
+        </div>
+        <!-- [ Main Content ] end -->
+    </div>
+</div>
+
+    <!-- AngularJS -->
+    <script type="text/javascript" src="assets/angularJs/angular.js"></script>
+    <script type="text/javascript" src="assets/angularJs/angular-route.js"></script>
+    <script type="text/javascript" src="App.js"></script>
+    <!-- controllers -->
+	<script src="src/controllers/affectationRegionController.js"></script>
+	<script src="src/controllers/affectationStatusController.js"></script>
+	<script src="src/controllers/statistiqueController.js"></script>
+    <!-- services -->
+	<script src="src/services/informationService.js"></script>	
+	<script src="src/services/affectationStatusService.js"></script>
+	<script src="src/services/affectionRegionService.js"></script>
+	<script src="src/services/regionService.js"></script>
+	<script src="src/services/statistiqueService.js"></script>
+	<script src="src/services/loginService.js"></script>
+	<script src="src/services/sessionService.js"></script>
+
+    <!-- Required Js -->
+    <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/ripple.js"></script>
+    <script src="assets/js/pcoded.min.js"></script>
+
+	
+	<!-- chart JS -->
+	<script src="assets/js/plugins/apexcharts.min.js"></script>
+	<script src="assets/js/pages/chart-apex.js"></script>
+
+</body>
+
+</html>
