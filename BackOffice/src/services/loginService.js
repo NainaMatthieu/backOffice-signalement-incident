@@ -12,14 +12,14 @@ app.factory('loginService', function($http, $location, sessionService){
                     sessionService.set('admin',user.id);
                     localStorage.userId = user.id
                     localStorage.user = user.name
-                    window.location.replace("http://127.0.0.1/BackOffice/#/home");
+                    window.location.replace("https://projet-signalement-incident.herokuapp.com/BackOffice/#/home");
                 }
  
                 else{
                     $scope.successLogin = false;
                     $scope.errorLogin = true;
                     $scope.errorMsg = response.data.message;
-                    window.location.replace("http://127.0.0.1/BackOffice/login.html");
+                    window.location.replace("https://projet-signalement-incident.herokuapp.com/BackOffice/login.html");
                 }
             });
             console.log($scope.errorLogin)
