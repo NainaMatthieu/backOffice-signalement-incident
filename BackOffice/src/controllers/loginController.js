@@ -1,7 +1,7 @@
 'use strict';
      
 app.controller('loginCtrl', function($scope, loginService){
-    $scope.errorLogin = false;
+    $scope.errorLogin = true;
  
     $scope.login = function(admin){
         console.log(admin)
